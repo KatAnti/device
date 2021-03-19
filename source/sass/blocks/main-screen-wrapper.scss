@@ -1,0 +1,28 @@
+.main-screen-wrapper {
+  overflow: hidden;
+  background-color: $dark-main-theme;
+  background-image: url("../img/main-screen-texture-desktop@1x.png");
+  background-size: cover;
+  background-position: center center;
+  color: $white;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/main-screen-texture-desktop@2x.png");
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/main-screen-texture-tablet@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-screen-texture-tablet@2x.png");
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/main-screen-texture-mobile@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-screen-texture-mobile@2x.png");
+    }
+  }
+}

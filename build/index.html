@@ -1,13 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <h1>Добро пожаловать в Лигу А.</h1>
-</body>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Производство и монтаж печатных плат, поставка комплектующих, блоков и модулей">
+    <title>Smart Device - магазин печатных плат</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/pt-mono.woff2" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-condensed-regular.woff2" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font" type="font/woff" crossorigin="anonymous">
+  </head>
+  <body class="body">
+    <div class="main-screen-wrapper">
+      <header class="header">
+        <a class="header__logo">
+          <picture>
+            <source media="(max-width: 768px)" srcset="img/smart-device-logo-mobile.svg">
+            <img src="img/smart-device-logo-desktop.svg" width="202" height="52" alt="Smart Device">
+          </picture>
+        </a>
+        <a class="header__contact header__contact--email" href="mailto:info@sd.ru"><span>info@sd.ru</span></a>
+        <a class="header__contact header__contact--phone" href="telto:+74950005252"><span>+7 (495) 000 52 52</span></a>
+        <a class="header__callback-button" href="#">Заказать звонок</a>
+      </header>
+      <section class="main-banner">
+        <div class="main-banner__text">
+          <h1>Печатные платы</h1>
+          <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
+          <a class="main-banner__consult-button" href="#">
+            <span>Получить бесплатную консультацию</span>
+            <span>бесплатная консультация</span>
+          </a>
+        </div>
+        <div class="main-banner__image">
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/banner-desktop@1x.webp 1x, img/banner-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/banner-tablet@1x.webp 1x, img/banner-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/banner-mobile@1x.webp 1x, img/banner-mobile@2x.webp 2x">
+            <!-- 1х: 705px; 2x: 1410px -->
+            <img src="img/banner-desktop@1x.png" srcset="img/banner-desktop@2x.png 2x" alt="Печатные платы">
+          </picture>
+        </div>
+        <a class="main-banner__scroll-down-button" href="#">Скролл вниз</a>
+      </section>
+    </div>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
+  </body>
 </html>

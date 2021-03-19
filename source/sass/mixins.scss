@@ -1,0 +1,56 @@
+@mixin main-text {
+  font-family: "PT Mono", "Courier New", monospace;
+  font-size: 16px;
+  line-height: 21.5px;
+  color: $main-text;
+}
+
+@mixin pseudo($top, $left, $width, $height) {
+  content: "";
+  display: block;
+  position: absolute;
+  top: $top;
+  left: $left;
+  width: $width;
+  height: $height;
+}
+
+@mixin list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin wrapper {
+  max-width: 1462px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin: 0 auto;
+
+  @media (max-width: $mobile-width) {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+}
+
+@mixin roboto-text {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+}
+
+@mixin main-title($color) {
+  @include roboto-text;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 50px;
+  text-align: center;
+  color: $color;
+
+  @media (max-width: $tablet-width) {
+    font-size: 24px;
+  }
+}
