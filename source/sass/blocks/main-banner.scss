@@ -1,18 +1,50 @@
 .main-banner {
-  @include wrapper;
   position: relative;
-  padding-top: 125px;
+  top: -123px;
+  overflow: hidden;
+  background-color: $dark-main-theme;
+  background-image: url("../img/main-screen-texture-desktop@1x.png");
+  background-size: cover;
+  background-position: center center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/main-screen-texture-desktop@2x.png");
+  }
+
+  @media (max-width: $tablet-width) {
+    top: -97px;
+    background-image: url("../img/main-screen-texture-tablet@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-screen-texture-tablet@2x.png");
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    top: -77px;
+    background-image: url("../img/main-screen-texture-mobile@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-screen-texture-mobile@2x.png");
+    }
+  }
+}
+
+.main-banner__wrapper {
+  @include wrapper($wrapper-big);
+  position: relative;
+  padding-top: 248px;
   padding-bottom: 100px;
-  min-height: 755px;
+  min-height: 878px;
 
   @media (max-width: $tablet-width) {
     min-height: auto;
-    padding-top: 40px;
+    padding-top: 136px;
     padding-bottom: 165px;
   }
 
   @media (max-width: $mobile-width) {
-    padding-top: 175px;
+    padding-top: 253px;
     padding-left: 19px;
     padding-right: 19px;
     padding-bottom: 72px;
@@ -23,6 +55,7 @@
   position: relative;
   max-width: 725px;
   margin-left: -5px;
+  color: $white;
   z-index: 1;
 
   @media (max-width: $tablet-width) {
@@ -179,20 +212,20 @@
 
 .main-banner__image {
   position: absolute;
-  top: 125px;
+  top: 248px;
   right: -51px;
   padding-top: 10px;
   z-index: 0;
 
   @media (max-width: $tablet-width) {
     @include size(465px, 340px);
-    top: 6px;
+    top: 103px;
     right: -205px;
   }
 
   @media (max-width: $mobile-width) {
     @include size(301px, 220px);
-    top: 5px;
+    top: 83px;
     right: -7px;
   }
 

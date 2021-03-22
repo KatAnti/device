@@ -1,0 +1,17 @@
+.main {
+  flex-basis: auto;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.main__background-wrapper {
+  background-image: url("../img/advantages-background-desktop.svg");
+  background-position: 196px -71px;
+  background-repeat: no-repeat;
+  z-index: 0;
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/advantages-background-mobile.svg");
+    background-position: 170px 220px;
+  }
+}

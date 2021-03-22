@@ -1,5 +1,14 @@
 .header {
-  @include wrapper();
+  position: relative;
+  max-height: 123px;
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.header__wrapper {
+  @include wrapper($wrapper-big);
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -94,25 +103,9 @@
 }
 
 .header__callback-button {
-  @include roboto-text;
-  padding: 14px 27px;
+  padding-left: 27px;
+  padding-right: 27px;
   margin-top: -3px;
-  border: 1px solid $white;
-  border-radius: 5px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-
-  &:hover {
-    border-color: $blue-main-theme-hover;
-  }
-
-  &:active {
-    opacity: 0.8;
-  }
 
   @media (max-width: $tablet-width) {
     display: none;

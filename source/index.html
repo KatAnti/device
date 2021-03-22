@@ -12,44 +12,192 @@
     <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font" type="font/woff" crossorigin="anonymous">
   </head>
   <body class="body">
-    <div class="main-screen-wrapper">
-      <header class="header">
+    <header class="header">
+      <div class="header__wrapper">
         <a class="header__logo">
           <picture>
             <source media="(max-width: 768px)" srcset="img/smart-device-logo-mobile.svg">
-            <img src="img/smart-device-logo-desktop.svg" width="202" height="52" alt="Smart Device">
+            <img src="img/smart-device-logo-header.svg" width="202" height="52" alt="Smart Device">
           </picture>
         </a>
         <a class="header__contact header__contact--email" href="mailto:info@sd.ru"><span>info@sd.ru</span></a>
         <a class="header__contact header__contact--phone" href="telto:+74950005252"><span>+7 (495) 000 52 52</span></a>
-        <a class="header__callback-button" href="#">Заказать звонок</a>
-      </header>
+        <a class="header__callback-button button button--white" href="#">Заказать звонок</a>
+      </div>
+    </header>
+    <main class="main">
       <section class="main-banner">
-        <div class="main-banner__text">
-          <h1>Печатные платы</h1>
-          <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-          <a class="main-banner__consult-button" href="#">
-            <span>Получить бесплатную консультацию</span>
-            <span>бесплатная консультация</span>
-          </a>
+        <div class="main-banner__wrapper">
+          <div class="main-banner__text">
+            <h1>Печатные платы</h1>
+            <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
+            <a class="main-banner__consult-button" href="#">
+              <span>Получить бесплатную консультацию</span>
+              <span>бесплатная консультация</span>
+            </a>
+          </div>
+          <div class="main-banner__image">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/banner-desktop@1x.webp 1x, img/banner-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/banner-tablet@1x.webp 1x, img/banner-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/banner-mobile@1x.webp 1x, img/banner-mobile@2x.webp 2x">
+              <!-- 1х: 705px; 2x: 1410px -->
+              <img src="img/banner-desktop@1x.png" srcset="img/banner-desktop@2x.png 2x" alt="Печатные платы">
+            </picture>
+          </div>
+          <a class="main-banner__scroll-down-button" href="#">Скролл вниз</a>
         </div>
-        <div class="main-banner__image">
-          <picture>
-            <source type="image/webp" media="(min-width: 1024px)" srcset="img/banner-desktop@1x.webp 1x, img/banner-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/banner-tablet@1x.webp 1x, img/banner-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/banner-mobile@1x.webp 1x, img/banner-mobile@2x.webp 2x">
-            <!-- 1х: 705px; 2x: 1410px -->
-            <img src="img/banner-desktop@1x.png" srcset="img/banner-desktop@2x.png 2x" alt="Печатные платы">
-          </picture>
-        </div>
-        <a class="main-banner__scroll-down-button" href="#">Скролл вниз</a>
       </section>
-    </div>
-    <main>
-
+      <div class="main__background-wrapper">
+        <section class="advantages">
+          <h2 class="visually-hidden">Преимущества Smart Device</h2>
+          <ul class="advantages__list">
+            <li>
+              <svg width="29" height="35">
+                <use xlink:href="img/sprite_auto.svg#icon-timing"></use>
+              </svg>
+              <h3>
+                Оперативные сроки
+              </h3>
+              <p>
+                Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки
+              </p>
+            </li>
+            <li>
+              <svg width="35" height="35">
+                <use xlink:href="img/sprite_auto.svg#icon-suppliers"></use>
+              </svg>
+              <h3>
+                Крупные поставщики
+              </h3>
+              <p>
+                Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.
+              </p>
+            </li>
+            <li>
+              <svg width="36" height="31">
+                <use xlink:href="img/sprite_auto.svg#icon-confidentiality"></use>
+              </svg>
+              <h3>
+                Полная конфиденциальность
+              </h3>
+              <p>
+                По желанию клиента  мы обеспечиваем полную конфеденциальность.
+              </p>
+            </li>
+            <li>
+              <svg width="35" height="35">
+                <use xlink:href="img/sprite_auto.svg#icon-price"></use>
+              </svg>
+              <h3>
+                Персонализация стоимости
+              </h3>
+              <p>
+                Мы  подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.
+              </p>
+            </li>
+          </ul>
+        </section>
+        <section class="about-company">
+          <h2>О компании</h2>
+          <p>
+            Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
+          </p>
+          <p>
+            Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.
+          </p>
+          <a class="about-company__button button button--blue" href="#">Подробнее</a>
+        </section>
+      </div>
     </main>
-    <footer>
-
+    <footer class="footer">
+      <div class="footer__contacts">
+        <div class="footer__social-media">
+          <a class="footer__logo">
+            <img src="img/smart-device-logo-footer.svg" width="216" height="52" alt="Smart Device">
+          </a>
+          <p>1999-2018 SD Service Devices</p>
+          <ul>
+            <li>
+              <a href="#" aria-label="Наша страница Facebook">
+                <svg width="27" height="27">
+                  <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Наша страница на Одноклассниках">
+                <svg width="27" height="27">
+                  <use xlink:href="img/sprite_auto.svg#icon-odnoklassniki"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Наша группа Вконтакте">
+                <svg width="27" height="27">
+                  <use xlink:href="img/sprite_auto.svg#icon-vk"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <nav class="main-nav accordeon accordeon--no-js accordeon--closed">
+          <h4>Разделы сайта</h4>
+          <div class="accordeon__content">
+            <ul>
+              <li>
+                <a href="#">О компании</a>
+              </li>
+              <li>
+                <a href="#">Продукты</a>
+              </li>
+              <li>
+                <a href="#">Производство печатных плат</a>
+              </li>
+              <li>
+                <a href="#">Монтаж печатных плат</a>
+              </li>
+              <li>
+                <a href="#">Комплектующие</a>
+              </li>
+              <li>
+                <a href="#">Доставка</a>
+              </li>
+              <li>
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <section class="contacts accordeon accordeon--no-js accordeon--closed">
+          <h4>Наш офис</h4>
+          <div class="contacts accordeon__content">
+            <address class="contacts__address">
+              г. Мытищи, Олимпийский проспект, д.10
+            </address>
+            <a href="telto:+74955894050">+7 (495) 589-40-50</a>
+            <a href="telto:+79250038767">+7 (925) 003-87-67</a>
+            <a href="telto:+792692608079">+7 (926) 926-080-79</a>
+          </div>
+        </section>
+      </div>
+      <div class="footer__copyrights">
+        <div class="footer__wrapper">
+          <div class="footer__legacy">
+            <p>
+              Все права защищены
+            </p>
+            <p>
+              1999-2018 SD Service Devices
+            </p>
+          </div>
+          <div class="footer__developers-links">
+            <a href="#">Условия конфиденциальности</a>
+            <a href="#">Developed by wow studio</a>
+          </div>
+        </div>
+      </div>
     </footer>
+  <script src="js/app.js"></script>
   </body>
 </html>

@@ -1,15 +1,11 @@
 .body {
+  @include main-text;
+  display: flex;
+  flex-direction: column;
   min-width: 320px;
+  min-height: 100%;
   margin: 0;
   padding: 0;
-
-  display: grid;
-  grid-template-rows:
-    min-content
-    1fr
-    min-content;
-
-  @include main-text;
 
   &--overflow {
     overflow: hidden;

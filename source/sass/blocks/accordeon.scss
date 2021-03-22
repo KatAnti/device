@@ -1,0 +1,50 @@
+.accordeon__content {
+  padding-bottom: 25px;
+
+  @media (max-width: $mobile-width) {
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 25px;
+  }
+}
+
+.accordeon .accordeon__content {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.accordeon--no-js .accordeon__content {
+  @media (max-width: $mobile-width) {
+    display: block;
+  }
+}
+
+.accordeon--no-js .h4 {
+  @media (max-width: $mobile-width) {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.accordeon--closed .accordeon__content {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.accordeon--open h4 {
+  @media (max-width: $mobile-width) {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.accordeon--open .accordeon__content {
+  @media (max-width: $mobile-width) {
+    display: block;
+  }
+}

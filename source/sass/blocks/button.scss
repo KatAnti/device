@@ -1,0 +1,42 @@
+.button {
+  @include roboto-text;
+  display: inline-block;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  &--white {
+    border: 1px solid $white;
+    color: white;
+
+    &:hover {
+      background-color: $white;
+      color: $blue-main-theme-hover;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+
+  &--blue {
+    border: 1px solid $blue-main-theme;
+    color: $blue-main-theme;
+
+    &:hover {
+      background-color: $blue-main-theme;
+      color: $white;
+    }
+
+    &:active {
+      background-color: $blue-main-theme-hover;
+      border-color: $blue-main-theme-hover;
+    }
+  }
+}

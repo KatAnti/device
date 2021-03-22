@@ -1,0 +1,75 @@
+.about-company {
+  @include wrapper($wrapper-small);
+  padding-right: 28px;
+  padding-bottom: 40px;
+  position: relative;
+  padding-left: 205px;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 213px;
+    padding-right: 23px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &::before {
+    @include pseudo(10px, 24px, 120px, 313px);
+    background-image: url("../../img/about-company-year.png");
+    background-size: 120px 313px;
+    background-repeat: no-repeat;
+
+    @media (max-width: $tablet-width) {
+      @include size(134px, 350px);
+      top: 6px;
+      background-size: 134px 350px;
+    }
+
+    @media (max-width: $mobile-width) {
+      display: none;
+    }
+  }
+}
+
+.about-company h2 {
+  @include main-title($main-text);
+  margin-bottom: 23px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 25px;
+    margin-bottom: 28px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 37px;
+    margin-bottom: 22px;
+  }
+}
+
+.about-company p {
+  margin-bottom: 22px;
+
+  @media (max-width: $mobile-width) {
+    line-height: 22px;
+    margin-bottom: 39px;
+  }
+}
+
+.about-company p:last-of-type {
+  margin-bottom: 42px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 44px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 28px;
+  }
+}
+
+.about-company__button {
+  padding-left: 50px;
+  padding-right: 50px;
+}

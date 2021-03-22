@@ -1,0 +1,50 @@
+.main-nav {
+  max-width: 800px;
+  padding-left: 85px;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 25px;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 100%;
+    padding-left: 0;
+    border-bottom: 1px solid $border-color;
+  }
+}
+
+.main-nav h4 {
+  @include footer-title;
+}
+
+.main-nav ul {
+  @include list;
+  column-count: 2;
+  column-gap: 65px;
+  font-size: 15px;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+
+  @media (max-width: $tablet-width) {
+    column-count: unset;
+    column-gap: 0;
+    letter-spacing: 0;
+    line-height: 25px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 25px;
+  }
+}
+
+.main-nav a {
+  color: $footer-text;
+
+  &:hover {
+    color: $blue-main-theme-hover;
+  }
+
+  &:active {
+    color: $blue-main-theme-active;
+  }
+}
