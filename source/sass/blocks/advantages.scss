@@ -3,8 +3,12 @@
   margin-top: -123px;
 
   @media (max-width: $tablet-width) {
-    padding-top: 81px;
+    padding-top: 79px;
     padding-bottom: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 83px;
   }
 }
 
@@ -33,6 +37,7 @@
   border: 1px solid $card-border-color;
   border-left: 3px solid $blue-main-theme;
   cursor: pointer;
+  transition: background-color 0.5s linear;
 
   &:nth-child(2n + 1) {
     margin-right: 2.6%;
@@ -60,10 +65,18 @@
     padding-right: 13px;
     margin-bottom: 19px;
 
+    &:nth-child(2) {
+      padding-right: 9px;
+    }
+
     &:nth-child(2n + 1) {
       margin-right: 0;
     }
   }
+}
+
+.advantages__list li:hover h3 {
+  color: $white;
 }
 
 .advantages__list h3 {

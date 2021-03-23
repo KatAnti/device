@@ -1,0 +1,77 @@
+.feedback {
+  padding: 61px 0 113px;
+  background-color: $blue-main-theme;
+  background-image: url("../img/feedback-form-background.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 52px;
+    padding-bottom: 103px;
+    background-image: none;
+  }
+}
+
+.feedback__wrapper {
+  @include wrapper($wrapper-small);
+  display: flex;
+  justify-content: flex-end;
+  background-image: url("../img/feedback-paper-plane-background.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+
+  @media (max-width: $tablet-width) {
+    justify-content: center;
+    background-image: none;
+  }
+}
+
+.feedback__form {
+  width: 570px;
+
+  @media (max-width: $tablet-width) {
+    width: 82%;
+    margin-left: 6px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
+}
+
+.feedback__form input[type="text"],
+.feedback__form input[type="tel"] {
+  width: 47%;
+  margin-bottom: 39px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 43px;
+  }
+}
+
+.feedback__form textarea {
+  height: 155px;
+
+  @media (max-width: $tablet-width) {
+    height: 160px;
+  }
+}
+
+.feedback__form button {
+  width: 47%;
+  margin-right: 6%;
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    margin-right: 0%;
+    margin-bottom: 20px;
+  }
+}
+
+.feedback__form div {
+  width: 46%;
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
+}

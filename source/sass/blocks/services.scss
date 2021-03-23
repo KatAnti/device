@@ -1,0 +1,35 @@
+.services {
+  background-color: $dark-main-theme;
+  padding-top: 37px;
+  padding-bottom: 80px;
+  color: $white;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 20px;
+    padding-bottom: 33px;
+  }
+}
+
+.services h2 {
+  @include wrapper($wrapper-small);
+  @include main-title($white);
+  margin-top: 50px;
+  margin-bottom: 53px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 28px;
+    padding-right: 130px;
+    margin-bottom: 50px;
+  }
+}
+
+.services__cards-wrapper {
+  @include wrapper($wrapper-small);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+  }
+}

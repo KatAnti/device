@@ -1,18 +1,20 @@
 .about-company {
   @include wrapper($wrapper-small);
   padding-right: 28px;
-  padding-bottom: 40px;
+  padding-bottom: 110px;
   position: relative;
   padding-left: 205px;
 
   @media (max-width: $tablet-width) {
     padding-left: 213px;
     padding-right: 23px;
+    padding-bottom: 83px;
   }
 
   @media (max-width: $mobile-width) {
     padding-left: 15px;
     padding-right: 15px;
+    padding-bottom: 64px;
   }
 
   &::before {
