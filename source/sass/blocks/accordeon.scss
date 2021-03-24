@@ -14,13 +14,23 @@
   }
 }
 
+.accordeon--closed p {
+  @media (max-width: $mobile-width) {
+    cursor: pointer;
+
+    &:hover {
+      color: $blue-main-theme;
+    }
+  }
+}
+
 .accordeon--no-js .accordeon__content {
   @media (max-width: $mobile-width) {
     display: block;
   }
 }
 
-.accordeon--no-js .h4 {
+.accordeon--no-js p {
   @media (max-width: $mobile-width) {
     &::before,
     &::after {
@@ -35,7 +45,7 @@
   }
 }
 
-.accordeon--open h4 {
+.accordeon--open p {
   @media (max-width: $mobile-width) {
     &::after {
       display: none;

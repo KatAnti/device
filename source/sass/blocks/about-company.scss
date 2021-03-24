@@ -19,7 +19,7 @@
 
   &::before {
     @include pseudo(10px, 24px, 120px, 313px);
-    background-image: url("../../img/about-company-year.png");
+    background-image: url("../img/about-company-year.png");
     background-size: 120px 313px;
     background-repeat: no-repeat;
 
@@ -37,11 +37,12 @@
 
 .about-company h2 {
   @include main-title($main-text);
+  margin-top: 30px;
   margin-bottom: 23px;
 
   @media (max-width: $tablet-width) {
     margin-top: 25px;
-    margin-bottom: 28px;
+    margin-bottom: 25px;
   }
 
   @media (max-width: $mobile-width) {
@@ -51,7 +52,7 @@
 }
 
 .about-company p {
-  margin-bottom: 22px;
+  margin-bottom: 19px;
 
   @media (max-width: $mobile-width) {
     line-height: 22px;
@@ -60,7 +61,7 @@
 }
 
 .about-company p:last-of-type {
-  margin-bottom: 42px;
+  margin-bottom: 40px;
 
   @media (max-width: $tablet-width) {
     margin-bottom: 44px;

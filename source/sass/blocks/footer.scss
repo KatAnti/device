@@ -1,5 +1,5 @@
 .footer {
-  padding-top: 65px;
+  padding-top: 63px;
   color: $footer-text;
   flex-basis: auto;
   flex-grow: 0;
@@ -7,6 +7,10 @@
 
   @media (max-width: $tablet-width) {
     padding-top: 20px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 47px;
   }
 }
 
@@ -38,6 +42,7 @@
   display: flex;
   justify-content: space-between;
   flex-basis: 460px;
+  flex-wrap: wrap;
 
   @media (max-width: $tablet-width) {
     display: none;
@@ -51,12 +56,16 @@
 .footer__developers-links {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   flex-shrink: 5;
-  flex-basis: 977px;
-  padding-left: 140px;
+  flex-basis: 857px;
+  padding-left: 40px;
+  margin-left: auto;
 
   @media (max-width: $tablet-width) {
     padding-left: 0;
+    flex-basis: 100%;
+    margin-left: 0;
   }
 
   @media (max-width: $mobile-width) {
@@ -98,7 +107,7 @@
   @include wrapper($wrapper-big);
   display: flex;
   justify-content: space-between;
-  padding-bottom: 35px;
+  padding-bottom: 34px;
 
   @media (max-width: $tablet-width) {
     padding-left: 0;
@@ -124,7 +133,7 @@
     min-width: 100%;
     padding-left: 25px;
     padding-right: 25px;
-    padding-bottom: 20px;
+    padding-bottom: 18px;
     margin-bottom: 39px;
     border-bottom: 1px solid $border-color;
   }

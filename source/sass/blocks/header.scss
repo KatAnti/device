@@ -34,12 +34,20 @@
 .header__logo {
   display: block;
   margin-right: auto;
+
+  @media (max-width: $mobile-width) {
+    width: 38px;
+    height: 38px;
+    overflow: hidden;
+  }
 }
 
 .header__logo img {
   @media (max-width: $mobile-width) {
     width: 38px;
     height: 38px;
+    object-fit: cover;
+    object-position: left;
   }
 }
 

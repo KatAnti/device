@@ -1,0 +1,82 @@
+.callback-popup {
+  display: none;
+  position: fixed;
+  align-self: center;
+  justify-self: center;
+  top: 20%;
+  max-width: 490px;
+  padding: 22px 39px 36px;
+  background-color: $blue-main-theme;
+  z-index: 20;
+  transition: 0.5s ease-out;
+
+  &--show {
+    display: block;
+  }
+}
+
+.callback-popup h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.callback-popup p {
+  margin-bottom: 33px;
+  padding-right: 30px;
+}
+
+.callback-popup input[type="text"],
+.callback-popup input[type="tel"] {
+  width: 100%;
+  padding-left: 23px;
+  padding-bottom: 5px;
+}
+
+.callback-popup textarea {
+  margin-bottom: 32px;
+  padding-top: 15px;
+  padding-left: 23px;
+}
+
+.callback-popup button[type="submit"] {
+  width: 100%;
+  margin-bottom: 34px;
+}
+
+.callback-popup__agreement label {
+  padding-right: 54px;
+  padding-left: 48px;
+
+  &::before {
+    top: 0;
+  }
+}
+
+.callback-popup__agreement input:checked ~ label::after {
+  top: 2px;
+}
+
+.callback-popup__close-button {
+  @include size(17px, 17px);
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    @include pseudo(8px, -3px, 23px, 1px);
+    background: $white;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}

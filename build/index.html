@@ -16,7 +16,6 @@
       <div class="header__wrapper">
         <a class="header__logo">
           <picture>
-            <source media="(max-width: 768px)" srcset="img/smart-device-logo-mobile.svg">
             <img src="img/smart-device-logo-header.svg" width="202" height="52" alt="Smart Device">
           </picture>
         </a>
@@ -159,7 +158,8 @@
             <input type="text" id="feedback-name" placeholder="Имя" name="feedback-person-name" required="">
             <label class="visually-hidden" for="feedback-phone">Введите Ваш номер телефона</label>
             <input type="tel" id="feedback-phone" placeholder="Телефон" pattern="^[+]\d[(]\d{3}[)]\d{7}$" name="feedback-person-phone" required="">
-            <textarea name="feedback-person-comment">Ваш вопрос</textarea>
+            <label class="visually-hidden" for="feedback-comment">Ваш вопрос</label>
+            <textarea id="feedback-comment" name="feedback-person-comment" placeholder="Ваш вопрос"></textarea>
             <button type="submit">Задать вопрос</button>
             <div class="form__agreement">
               <input id="feedback-agreement" class="visually-hidden" type="checkbox">
@@ -200,8 +200,8 @@
             </li>
           </ul>
         </div>
-        <nav class="main-nav accordeon accordeon--no-js accordeon--closed">
-          <h4>Разделы сайта</h4>
+        <nav class="main-nav accordeon accordeon--no-js">
+          <p>Разделы сайта</p>
           <div class="accordeon__content">
             <ul>
               <li>
@@ -228,8 +228,8 @@
             </ul>
           </div>
         </nav>
-        <section class="contacts accordeon accordeon--no-js accordeon--closed">
-          <h4>Наш офис</h4>
+        <div class="contacts accordeon accordeon--no-js">
+          <p>Наш офис</p>
           <div class="contacts accordeon__content">
             <address class="contacts__address">
               г. Мытищи, Олимпийский проспект, д.10
@@ -238,7 +238,7 @@
             <a href="telto:+79250038767">+7 (925) 003-87-67</a>
             <a href="telto:+792692608079">+7 (926) 926-080-79</a>
           </div>
-        </section>
+        </div>
       </div>
       <div class="footer__copyrights">
         <div class="footer__wrapper">
@@ -257,6 +257,23 @@
         </div>
       </div>
     </footer>
+    <form class="form callback-popup" action="https://echo.htmlacademy.ru" method="POST">
+      <button class="callback-popup__close-button"></button>
+      <h2>Закажите звонок</h2>
+      <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+      <label class="visually-hidden" for="callback-name">Введите Ваше Имя</label>
+      <input type="text" id="callback-name" placeholder="Имя" name="feedback-person-name" required="">
+      <label class="visually-hidden" for="callback-phone">Введите Ваш номер телефона</label>
+      <input type="tel" id="callback-phone" placeholder="Телефон" pattern="^[+]\d[(]\d{3}[)]\d{7}$" name="feedback-person-phone" required="">
+      <label class="visually-hidden" for="callback-comment">Ваш вопрос</label>
+      <textarea id="callback-comment" name="callback-person-comment" placeholder="Ваш вопрос"></textarea>
+      <button type="submit">Отправить</button>
+      <div class="form__agreement callback-popup__agreement">
+        <input id="callback-agreement" class="visually-hidden" type="checkbox">
+        <label for="callback-agreement">Я согласен на обработку  персональных данных</label>
+      </div>
+    </form>
+    <div class="overlay"></div>
   <script src="js/app.js"></script>
   </body>
 </html>

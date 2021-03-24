@@ -31,7 +31,7 @@
   display: block;
   flex-basis: 48.7%;
   min-height: 300px;
-  padding: 40px 45px 52px 41px;
+  padding: 40px 45px 48px 41px;
   margin-bottom: 30px;
   background: $white;
   border: 1px solid $card-border-color;
@@ -52,7 +52,7 @@
   @media (max-width: $tablet-width) {
     flex-basis: 48%;
     min-height: 232px;
-    padding: 25px 20px 10px 25px;
+    padding: 23px 20px 4px 25px;
 
     &:nth-child(2n + 1) {
       margin-right: 4%;
@@ -61,7 +61,7 @@
 
   @media (max-width: $mobile-width) {
     flex-basis: 100%;
-    padding-bottom: 14px;
+    padding-bottom: 10px;
     padding-right: 13px;
     margin-bottom: 19px;
 
@@ -102,7 +102,7 @@
 
 .advantages__list p {
   @media (max-width: $tablet-width) {
-    margin-top: 11px;
+    margin-top: 9px;
   }
 }
 

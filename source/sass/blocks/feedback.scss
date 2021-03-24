@@ -1,14 +1,20 @@
 .feedback {
-  padding: 61px 0 113px;
+  padding: 60px 0 113px;
   background-color: $blue-main-theme;
   background-image: url("../img/feedback-form-background.svg");
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: center right;
+  overflow: hidden;
 
   @media (max-width: $tablet-width) {
-    padding-top: 52px;
+    padding-top: 46px;
     padding-bottom: 103px;
     background-image: none;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 0;
+    padding-bottom: 43px;
   }
 }
 
@@ -16,26 +22,42 @@
   @include wrapper($wrapper-small);
   display: flex;
   justify-content: flex-end;
-  background-image: url("../img/feedback-paper-plane-background.png");
-  background-repeat: no-repeat;
-  background-position: left center;
 
   @media (max-width: $tablet-width) {
     justify-content: center;
-    background-image: none;
   }
 }
 
 .feedback__form {
+  position: relative;
   width: 570px;
+
+  &::before {
+    @include pseudo(101px, -625px, 511px, 288px);
+    background-image: url("../img/feedback-paper-plane-background.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  &::after {
+    @include pseudo(30px, -776px, 671px, 500px);
+    background-image: url("../img/banner-decor-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
 
   @media (max-width: $tablet-width) {
     width: 82%;
     margin-left: 6px;
+
+    &::before {
+      display: none;
+    }
   }
 
   @media (max-width: $mobile-width) {
     width: 100%;
+    margin-left: 0;
   }
 }
 
@@ -47,6 +69,11 @@
   @media (max-width: $tablet-width) {
     margin-bottom: 43px;
   }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    margin-bottom: 32px;
+  }
 }
 
 .feedback__form textarea {
@@ -54,6 +81,10 @@
 
   @media (max-width: $tablet-width) {
     height: 160px;
+  }
+
+  @media (max-width: $mobile-width) {
+    height: 105px;
   }
 }
 
@@ -65,6 +96,10 @@
     width: 100%;
     margin-right: 0%;
     margin-bottom: 20px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 30px;
   }
 }
 

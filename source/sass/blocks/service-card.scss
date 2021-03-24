@@ -1,12 +1,36 @@
 .service-card {
-  position: relative;
   width: 31.7%;
   margin-bottom: 46px;
-  transition: 0.5s linear;
 
   &:not(:nth-child(3n+3)):not(:last-child) {
     margin-right: 2.45%;
   }
+
+  &:hover::before {
+    background-color: $blue-main-theme-hover;
+  }
+
+  &:active::before {
+    background-color: $blue-main-theme-active;
+  }
+
+  @media (max-width: $tablet-width) {
+    @include size(100%, 256px);
+
+    &:not(:nth-child(3n+3)):not(:last-child) {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.service-card a {
+  position: relative;
+  display: block;
+  color: $white;
 
   &::before {
     @include pseudo(auto, auto, 63px, 63px);
@@ -26,27 +50,6 @@
     transform: rotate(-45deg);
     z-index: 3;
   }
-
-  &:hover::before {
-    background-color: $blue-main-theme-hover;
-  }
-
-  &:active::before {
-    background-color: $blue-main-theme-active;
-  }
-
-  @media (max-width: $tablet-width) {
-    @include size(100%, 256px);
-
-    &:not(:nth-child(3n+3)):not(:last-child) {
-      margin-right: 0;
-    }
-  }
-}
-
-.service-card a {
-  display: block;
-  color: $white;
 }
 
 .service-card img {
@@ -55,7 +58,7 @@
   height: 100%;
   object-fit: cover;
   opacity: 0.2;
-  transition: 0.5s linear;
+  transition: opacity 0.5s linear;
 
   @media (max-width: $tablet-width) {
     height: 256px;
@@ -88,5 +91,9 @@
     top: 21px;
     max-width: 170px;
   }
-}
 
+  @media (max-width: $mobile-width) {
+    top: 0;
+    left: 33px;
+  }
+}

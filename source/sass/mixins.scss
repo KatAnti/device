@@ -1,7 +1,7 @@
 @mixin main-text {
   font-family: "PT Mono", "Courier New", monospace;
   font-size: 16px;
-  line-height: 21.5px;
+  line-height: 22px;
   color: $main-text;
 }
 
@@ -76,7 +76,6 @@
     position: relative;
     margin-bottom: 0;
     padding: 28px 15px;
-    cursor: pointer;
   }
 }
 

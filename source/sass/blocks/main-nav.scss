@@ -1,9 +1,11 @@
 .main-nav {
   max-width: 800px;
-  padding-left: 70px;
+  padding-left: 84px;
+  padding-right: 10px;
 
   @media (max-width: $tablet-width) {
     padding-left: 25px;
+    padding-right: 0;
   }
 
   @media (max-width: $mobile-width) {
@@ -13,7 +15,7 @@
   }
 }
 
-.main-nav h4 {
+.main-nav p {
   @include footer-title;
 }
 
@@ -28,10 +30,6 @@
     column-count: unset;
     column-gap: 0;
     line-height: 25px;
-  }
-
-  @media (max-width: $mobile-width) {
-    padding-left: 25px;
   }
 }
 
