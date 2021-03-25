@@ -23,6 +23,7 @@ gulp.task("css", function () {
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(postcss([ autoprefixer() ]))
+    .pipe(gulp.dest("build/css"))
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
@@ -32,7 +33,7 @@ gulp.task("css", function () {
 
 gulp.task("scripts", function () {
   return gulp.src('source/js/*.js')
-    .pipe(concat('app.js'))
+    .pipe(concat('main.js'))
     .pipe(gulp.dest('build/js'));
 });
 

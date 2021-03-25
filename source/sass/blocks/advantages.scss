@@ -27,7 +27,7 @@
   }
 }
 
-.advantages__list li {
+.advantages__item {
   display: block;
   flex-basis: 48.7%;
   min-height: 300px;
@@ -75,11 +75,11 @@
   }
 }
 
-.advantages__list li:hover h3 {
+.advantages__item:hover h3 {
   color: $white;
 }
 
-.advantages__list h3 {
+.advantages__item h3 {
   @include roboto-text;
   margin-top: 12px;
   margin-bottom: 19px;
@@ -100,16 +100,16 @@
   }
 }
 
-.advantages__list p {
+.advantages__item p {
   @media (max-width: $tablet-width) {
     margin-top: 9px;
   }
 }
 
-.advantages__list svg {
+.advantages__item svg {
   fill: $blue-main-theme;
 }
 
-.advantages__list li:hover svg {
+.advantages__item:hover svg {
   fill: $white;
 }

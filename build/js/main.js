@@ -30,12 +30,10 @@
 'use strict';
 
 (function () {
+  var ESCAPE = 'Escape';
+
   var pageBody = document.querySelector('.body');
   var callbackPopup = pageBody.querySelector('.callback-popup');
-  var nameInput = callbackPopup.querySelector('#callback-name');
-  var phoneInput = callbackPopup.querySelector('#callback-phone');
-  var commentInput = callbackPopup.querySelector('textarea');
-  var closeButton = callbackPopup.querySelector('.callback-popup__close-button');
   var callbackPopupBtn = pageBody.querySelector('.header__callback-button');
   var overlay = pageBody.querySelector('.overlay');
 
@@ -43,10 +41,15 @@
   var storagePhone = localStorage.getItem('phone');
   var storageComment = localStorage.getItem('comment');
 
-  var esc = 'Escape';
+  if (callbackPopup) {
+    var nameInput = callbackPopup.querySelector('#callback-name');
+    var phoneInput = callbackPopup.querySelector('#callback-phone');
+    var commentInput = callbackPopup.querySelector('textarea');
+    var closeButton = callbackPopup.querySelector('.callback-popup__close-button');
+  }
 
   var onEscKeypress = function (evt) {
-    if (evt.key === esc) {
+    if (evt.key === ESCAPE) {
       closePopup();
     }
   };
@@ -117,44 +120,49 @@
 'use strict';
 
 (function () {
+  var BACKSPACE = 'Backspace';
+  var MASK_START = '+7(';
+  var FULL_MASK_REG = /^[+]\d[(]\d{3}[)]\d{7}$/;
+  var BEFORE_BRACKET_MASK_REG = /^[+][7][(]\d{3}$/;
+  var START_MASK_REG = /^[+][7][(]/;
+  var NUMBER_REG = /\d/;
   var phoneFeedbackInput = document.querySelector('#feedback-phone');
   var phoneCallbackInput = document.querySelector('#callback-phone');
-  var maskStart = '+7(';
-  var fullMaskReg = /^[+]\d[(]\d{3}[)]\d{7}$/;
-  var beforeBracketMaskReg = /^[+][7][(]\d{3}$/;
-  var startMaskReg = /^[+][7][(]/;
-  var numberReg = /\d/;
-  var backspace = 'Backspace';
 
   var addPhoneMask = function (input) {
     input.addEventListener('focus', function () {
       if (input.value === '') {
-        input.value = maskStart;
+        input.value = MASK_START;
       }
     });
 
     input.addEventListener('blur', function () {
-      if (input.value === maskStart) {
+      if (input.value === MASK_START) {
         input.value = '';
       }
     });
 
     input.addEventListener('keydown', function (evt) {
-      var isBackspace = evt.key === backspace;
-      var isMaskStartReached = input.value === maskStart && isBackspace;
-      var isFull = fullMaskReg.test(input.value) && !isBackspace;
-      var isNotANumber = !numberReg.test(evt.key) && !isBackspace;
-      var isTypingBeforeString = !startMaskReg.test(input.value);
+      var isBackspace = evt.key === BACKSPACE;
+      var isMaskStartReached = input.value === MASK_START && isBackspace;
+      var isFull = FULL_MASK_REG.test(input.value) && !isBackspace;
+      var isNotANumber = !NUMBER_REG.test(evt.key) && !isBackspace;
+      var isTypingWrong = !START_MASK_REG.test(input.value) && NUMBER_REG.test(evt.key);
+      var isTypingBeforeString = !START_MASK_REG.test(input.value);
 
       if (isMaskStartReached || isFull || isNotANumber) {
         evt.preventDefault();
       }
 
       if (isTypingBeforeString) {
-        input.value = maskStart + evt.key;
+        input.value = MASK_START + '(';
       }
 
-      if (beforeBracketMaskReg.test(input.value) && evt.key !== backspace) {
+      if (isTypingWrong) {
+        input.value = MASK_START + evt.key;
+      }
+
+      if (BEFORE_BRACKET_MASK_REG.test(input.value) && evt.key !== BACKSPACE) {
         input.value = input.value + ')';
       }
     });
@@ -178,7 +186,6 @@
   var consultButton = document.querySelector('.main-banner__consult-button');
   var consultForm = document.querySelector('#feedback');
 
-
   var smothScroll = function (trigger, elementScrollTo) {
     trigger.addEventListener('click', function (evt) {
       evt.preventDefault();
@@ -198,15 +205,16 @@
 'use strict';
 
 (function () {
+  var LETTERS_COUNT = 200;
+
   var textElement = document.querySelector('.about-company p:last-of-type');
-  var originalText = textElement.innerText;
   var mobileWidth = window.matchMedia('(max-width: 1024px)');
-  var lettersCount = 200;
 
   if (textElement) {
+    var originalText = textElement.innerText;
     var replaceString = function () {
       if (mobileWidth.matches) {
-        textElement.innerText = originalText.slice(0, lettersCount) + '..';
+        textElement.innerText = originalText.slice(0, LETTERS_COUNT) + '..';
       } else {
         textElement.innerText = originalText;
       }

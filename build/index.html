@@ -20,7 +20,7 @@
           </picture>
         </a>
         <a class="header__contact header__contact--email" href="mailto:info@sd.ru"><span>info@sd.ru</span></a>
-        <a class="header__contact header__contact--phone" href="telto:+74950005252"><span>+7 (495) 000 52 52</span></a>
+        <a class="header__contact header__contact--phone" href="tel:+74950005252"><span>+7 (495) 000 52 52</span></a>
         <a class="header__callback-button button button--white" href="#">Заказать звонок</a>
       </div>
     </header>
@@ -51,7 +51,7 @@
         <section id="advantages" class="advantages">
           <h2 class="visually-hidden">Преимущества Smart Device</h2>
           <ul class="advantages__list">
-            <li>
+            <li class="advantages__item">
               <svg width="29" height="35">
                 <use xlink:href="img/sprite_auto.svg#icon-timing"></use>
               </svg>
@@ -62,7 +62,7 @@
                 Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки
               </p>
             </li>
-            <li>
+            <li class="advantages__item">
               <svg width="35" height="35">
                 <use xlink:href="img/sprite_auto.svg#icon-suppliers"></use>
               </svg>
@@ -73,7 +73,7 @@
                 Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.
               </p>
             </li>
-            <li>
+            <li class="advantages__item">
               <svg width="36" height="31">
                 <use xlink:href="img/sprite_auto.svg#icon-confidentiality"></use>
               </svg>
@@ -84,7 +84,7 @@
                 По желанию клиента  мы обеспечиваем полную конфеденциальность.
               </p>
             </li>
-            <li>
+            <li class="advantages__item">
               <svg width="35" height="35">
                 <use xlink:href="img/sprite_auto.svg#icon-price"></use>
               </svg>
@@ -234,9 +234,9 @@
             <address class="contacts__address">
               г. Мытищи, Олимпийский проспект, д.10
             </address>
-            <a href="telto:+74955894050">+7 (495) 589-40-50</a>
-            <a href="telto:+79250038767">+7 (925) 003-87-67</a>
-            <a href="telto:+792692608079">+7 (926) 926-080-79</a>
+            <a href="tel:+74955894050">+7 (495) 589-40-50</a>
+            <a href="tel:+79250038767">+7 (925) 003-87-67</a>
+            <a href="tel:+792692608079">+7 (926) 926-080-79</a>
           </div>
         </div>
       </div>
@@ -258,7 +258,7 @@
       </div>
     </footer>
     <form class="form callback-popup" action="https://echo.htmlacademy.ru" method="POST">
-      <button class="callback-popup__close-button"></button>
+      <button class="callback-popup__close-button">Закрыть окно</button>
       <h2>Закажите звонок</h2>
       <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
       <label class="visually-hidden" for="callback-name">Введите Ваше Имя</label>
@@ -274,6 +274,6 @@
       </div>
     </form>
     <div class="overlay"></div>
-  <script src="js/app.js"></script>
+  <script src="js/main.js"></script>
   </body>
 </html>

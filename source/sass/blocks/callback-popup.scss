@@ -65,6 +65,7 @@
   background: transparent;
   border: none;
   cursor: pointer;
+  text-indent: -999999px;
 
   &::before,
   &::after {

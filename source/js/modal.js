@@ -1,12 +1,10 @@
 'use strict';
 
 (function () {
+  var ESCAPE = 'Escape';
+
   var pageBody = document.querySelector('.body');
   var callbackPopup = pageBody.querySelector('.callback-popup');
-  var nameInput = callbackPopup.querySelector('#callback-name');
-  var phoneInput = callbackPopup.querySelector('#callback-phone');
-  var commentInput = callbackPopup.querySelector('textarea');
-  var closeButton = callbackPopup.querySelector('.callback-popup__close-button');
   var callbackPopupBtn = pageBody.querySelector('.header__callback-button');
   var overlay = pageBody.querySelector('.overlay');
 
@@ -14,10 +12,15 @@
   var storagePhone = localStorage.getItem('phone');
   var storageComment = localStorage.getItem('comment');
 
-  var esc = 'Escape';
+  if (callbackPopup) {
+    var nameInput = callbackPopup.querySelector('#callback-name');
+    var phoneInput = callbackPopup.querySelector('#callback-phone');
+    var commentInput = callbackPopup.querySelector('textarea');
+    var closeButton = callbackPopup.querySelector('.callback-popup__close-button');
+  }
 
   var onEscKeypress = function (evt) {
-    if (evt.key === esc) {
+    if (evt.key === ESCAPE) {
       closePopup();
     }
   };

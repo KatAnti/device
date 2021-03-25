@@ -94,6 +94,7 @@
 .form button[type="submit"] {
   @include roboto-text;
   display: inline-block;
+  vertical-align: top;
   padding-top: 14px;
   padding-bottom: 14px;
   padding-left: 20px;

@@ -6,7 +6,6 @@
   var consultButton = document.querySelector('.main-banner__consult-button');
   var consultForm = document.querySelector('#feedback');
 
-
   var smothScroll = function (trigger, elementScrollTo) {
     trigger.addEventListener('click', function (evt) {
       evt.preventDefault();

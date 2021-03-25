@@ -1,6 +1,7 @@
 .button {
   @include roboto-text;
   display: inline-block;
+  vertical-align: top;
   padding-top: 14px;
   padding-bottom: 14px;
   border-radius: 5px;
