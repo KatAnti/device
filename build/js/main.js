@@ -4,6 +4,14 @@
   var controllers = document.querySelectorAll('.accordeon');
   var mobileWidth = window.matchMedia('(max-width: 768px)');
 
+  var closeAllTabs = function () {
+    controllers.forEach(function (controller) {
+      if (controller.classList.contains('accordeon--open')) {
+        controller.classList.remove('accordeon--open');
+      }
+    });
+  };
+
   if (controllers.length > 0) {
     controllers.forEach(function (controller) {
       controller.classList.remove('accordeon--no-js');
@@ -11,7 +19,14 @@
 
       controller.addEventListener('click', function () {
         if (mobileWidth.matches) {
-          controller.classList.toggle('accordeon--open');
+
+          if (controller.classList.contains('accordeon--open')) {
+            controller.classList.remove('accordeon--open');
+            return;
+          }
+
+          closeAllTabs();
+          controller.classList.add('accordeon--open');
         }
       });
     });
@@ -121,6 +136,7 @@
 
 (function () {
   var BACKSPACE = 'Backspace';
+  var TAB = 'Tab';
   var MASK_START = '+7(';
   var FULL_MASK_REG = /^[+]\d[(]\d{3}[)]\d{7}$/;
   var BEFORE_BRACKET_MASK_REG = /^[+][7][(]\d{3}$/;
@@ -144,13 +160,14 @@
 
     input.addEventListener('keydown', function (evt) {
       var isBackspace = evt.key === BACKSPACE;
+      var isTab = evt.key === TAB;
       var isMaskStartReached = input.value === MASK_START && isBackspace;
       var isFull = FULL_MASK_REG.test(input.value) && !isBackspace;
       var isNotANumber = !NUMBER_REG.test(evt.key) && !isBackspace;
       var isTypingWrong = !START_MASK_REG.test(input.value) && NUMBER_REG.test(evt.key);
       var isTypingBeforeString = !START_MASK_REG.test(input.value);
 
-      if (isMaskStartReached || isFull || isNotANumber) {
+      if ((isMaskStartReached || isFull || isNotANumber) && !isTab) {
         evt.preventDefault();
       }
 

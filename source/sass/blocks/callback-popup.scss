@@ -11,7 +11,7 @@
   transition: 0.5s ease-out;
 
   &--show {
-    display: block;
+    display: flex;
   }
 }
 
@@ -58,10 +58,10 @@
 }
 
 .callback-popup__close-button {
-  @include size(17px, 17px);
+  @include size(30px, 30px);
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 13px;
+  right: 13px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -69,7 +69,7 @@
 
   &::before,
   &::after {
-    @include pseudo(8px, -3px, 23px, 1px);
+    @include pseudo(15px, 3px, 23px, 1px);
     background: $white;
   }
 

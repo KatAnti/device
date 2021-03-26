@@ -1,4 +1,7 @@
 .accordeon__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding-bottom: 25px;
 
   @media (max-width: $mobile-width) {
@@ -26,7 +29,7 @@
 
 .accordeon--no-js .accordeon__content {
   @media (max-width: $mobile-width) {
-    display: block;
+    display: flex;
   }
 }
 
@@ -55,6 +58,6 @@
 
 .accordeon--open .accordeon__content {
   @media (max-width: $mobile-width) {
-    display: block;
+    display: flex;
   }
 }

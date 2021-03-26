@@ -12,18 +12,17 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  flex-wrap: wrap;
   padding-top: 33px;
-  padding-bottom: 33px;
+  padding-bottom: 38px;
 
   @media (max-width: $tablet-width) {
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 26px;
   }
 
   @media (max-width: $mobile-width) {
     padding-top: 17px;
-    padding-bottom: 17px;
+    padding-bottom: 16px;
   }
 }
 
@@ -34,6 +33,7 @@
 .header__logo {
   display: block;
   margin-right: auto;
+  flex-grow: 1;
 
   @media (max-width: $mobile-width) {
     width: 38px;
@@ -43,6 +43,9 @@
 }
 
 .header__logo img {
+  display: block;
+  margin-right: 40px;
+
   @media (max-width: $mobile-width) {
     width: 38px;
     height: 38px;
@@ -51,9 +54,25 @@
   }
 }
 
+.header__contacts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 60%;
+  min-width: 480px;
+  flex-shrink: 1;
+
+  @media (max-width: $tablet-width) {
+    min-width: auto;
+  }
+}
+
 .header__contact {
   display: block;
-  margin-top: -5px;
+  margin-top: 7px;
+  margin-bottom: 10px;
+  margin-right: 50px;
   padding-left: 34px;
   background-position: 0 center;
   background-repeat: no-repeat;
@@ -69,36 +88,35 @@
 
   @media (max-width: $tablet-width) {
     padding-left: 0;
+    margin-right: 33px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   @media (max-width: $mobile-width) {
-    margin-top: -10px;
+    margin-right: 21px;
   }
 
   &--email {
-    margin-right: 90px;
+    padding-left: 40px;
     background-image: url("../img/mail-icon.svg");
     background-size: 19px 14px;
 
     @media (max-width: $tablet-width) {
       @include size(25px, 19px);
-      margin-right: 34px;
       background-size: 25px 19px;
-    }
-
-    @media (max-width: $mobile-width) {
-      margin-right: 21px;
+      padding-left: 0;
     }
   }
 
   &--phone {
-    margin-right: 50px;
     background-image: url("../img/phone-icon.svg");
     background-size: 18px 18px;
 
     @media (max-width: $tablet-width) {
       @include size(24px, 24px);
-      margin-right: 0;
       background-size: 24px 24px;
     }
   }
@@ -113,7 +131,7 @@
 .header__callback-button {
   padding-left: 27px;
   padding-right: 27px;
-  margin-top: -3px;
+  max-width: 250px;
 
   @media (max-width: $tablet-width) {
     display: none;

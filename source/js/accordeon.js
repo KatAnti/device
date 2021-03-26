@@ -4,6 +4,14 @@
   var controllers = document.querySelectorAll('.accordeon');
   var mobileWidth = window.matchMedia('(max-width: 768px)');
 
+  var closeAllTabs = function () {
+    controllers.forEach(function (controller) {
+      if (controller.classList.contains('accordeon--open')) {
+        controller.classList.remove('accordeon--open');
+      }
+    });
+  };
+
   if (controllers.length > 0) {
     controllers.forEach(function (controller) {
       controller.classList.remove('accordeon--no-js');
@@ -11,7 +19,14 @@
 
       controller.addEventListener('click', function () {
         if (mobileWidth.matches) {
-          controller.classList.toggle('accordeon--open');
+
+          if (controller.classList.contains('accordeon--open')) {
+            controller.classList.remove('accordeon--open');
+            return;
+          }
+
+          closeAllTabs();
+          controller.classList.add('accordeon--open');
         }
       });
     });
